@@ -1,0 +1,350 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "Home",
+        "Components": [
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "background",
+            "Width": 800,
+            "Height": 480,
+            "CustomContainerDefinitionName": "Background"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "PressMeButton",
+            "X": 280,
+            "Y": 215,
+            "Width": 240,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.png",
+            "TextId": "__SingleUse_3682",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\medium_rounded_normal.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "DummyButton",
+            "X": 40,
+            "Y": 100,
+            "Width": 240,
+            "Height": 50,
+            "Visible": false,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.png",
+            "TextId": "__SingleUse_GASO",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\medium_rounded_normal.json"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "ButtonPressed",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "PressMeButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Screen1"
+            }
+          },
+          {
+            "InteractionName": "DummyButtonPressed",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "DummyButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Screen2"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Screen1",
+        "Components": [
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "background",
+            "Width": 800,
+            "Height": 480,
+            "CustomContainerDefinitionName": "Background"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "Screen2",
+        "Components": [
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "background",
+            "Width": 800,
+            "Height": 480,
+            "CustomContainerDefinitionName": "Background"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "Off",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "BlackBackground",
+            "Width": 800,
+            "Height": 480
+          },
+          {
+            "Type": "Button",
+            "Name": "OnButton",
+            "Width": 240,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.png",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\medium_rounded_normal.json"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "OnButtonPressed",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "OnButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Home"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [
+      {
+        "Name": "Background",
+        "Width": 800,
+        "Height": 480,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "BackgroundImage",
+            "Width": 800,
+            "Height": 480,
+            "RelativeFilename": "Backgrounds\\MainBackground..png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "HomeButton",
+            "X": 320,
+            "Y": 415,
+            "Width": 161,
+            "Height": 65,
+            "Pressed": "Buttons\\HomeSel.png",
+            "Released": "Buttons\\HomeDesel.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "GoBackButton",
+            "X": 481,
+            "Y": 415,
+            "Width": 161,
+            "Height": 65,
+            "Pressed": "Buttons\\UpSel.png",
+            "Released": "Buttons\\UpDesel.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "SetupButton",
+            "X": 481,
+            "Y": 415,
+            "Width": 161,
+            "Height": 65,
+            "Pressed": "Buttons\\SetupSel.png",
+            "Released": "Buttons\\SetupDesel.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "OffButton",
+            "Y": 415,
+            "Width": 161,
+            "Height": 65,
+            "Pressed": "Buttons\\OffSel.png",
+            "Released": "Buttons\\OffDesel.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "HeaderText",
+            "X": 250,
+            "Y": 8,
+            "Width": 300,
+            "Height": 49,
+            "TextId": "Home",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "TimeText",
+            "X": 668,
+            "Y": 22,
+            "Width": 96,
+            "Height": 24,
+            "TextId": "__SingleUse_Y8BA",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_AI2Q",
+              "UseBuffer": true,
+              "BufferSize": 16
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "HomePressed",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "HomeButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "HomePressed"
+            }
+          },
+          {
+            "InteractionName": "OffPressed",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "OffButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Off"
+            }
+          },
+          {
+            "InteractionName": "GoBackPressed",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "GoBackButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "GoBackPressed"
+            }
+          },
+          {
+            "InteractionName": "SetupPressed",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "SetupButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "SetupPressed"
+            }
+          }
+        ]
+      }
+    ],
+    "Name": "CustomContainerKK",
+    "Resolution": {
+      "Width": 800,
+      "Height": 480
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "Home",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp",
+      "24": "LCD24bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 800,
+        "Height": 480
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommand": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommand": "make -f ../gcc/Makefile flash -j8",
+    "FlashTargetCommandOverride": "make -f ../gcc/Makefile flash",
+    "FlashTargetIntCommandOverride": "make -f ../gcc/Makefile intflash",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape",
+    "Family": "STM32H7",
+    "SubFamily": "STM32H7A3/7B3",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m7",
+    "ProjectFile": "../STM32H7B3I_EVAL.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": [
+      "CWRVector",
+      "VectorFonts"
+    ]
+  },
+  "Version": "4.24.2",
+  "CreatedBy": "4.24.2"
+}

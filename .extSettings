@@ -1,0 +1,7 @@
+[ProjectFiles]
+HeaderPath=../Drivers/BSP/Components/Common;../Drivers/BSP/STM32H7B3I-EVAL
+[Groups]
+Drivers/BSP/STM32H7B3I-EVAL=../Drivers/BSP/STM32H7B3I-EVAL/stm32h7b3i_eval.c;../Drivers/BSP/STM32H7B3I-EVAL/stm32h7b3i_eval_bus.c;../Drivers/BSP/STM32H7B3I-EVAL/stm32h7b3i_eval_io.c;../Drivers/BSP/STM32H7B3I-EVAL/stm32h7b3i_eval_ospi.c;..\Drivers\BSP\STM32H7B3I-EVAL\stm32h7b3i_eval_sdram.c;..\Drivers\BSP\STM32H7B3I-EVAL\stm32h7b3i_eval_ts.c
+Drivers/BSP/Components=../Drivers/BSP/Components/ft5336/ft5336.c;../Drivers/BSP/Components/ft5336/ft5336_reg.c;../Drivers/BSP/Components/is42s32800j/is42s32800j.c;../Drivers/BSP/Components/mfxstm32l152/mfxstm32l152.c;../Drivers/BSP/Components/mfxstm32l152/mfxstm32l152_reg.c;..\Drivers\BSP\Components\mx25lm51245g\mx25lm51245g.c
+Application/User/TouchGFX/Target=../TouchGFX/Target/CortexMMCUInstrumentation.cpp
+[Others]
